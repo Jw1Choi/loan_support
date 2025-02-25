@@ -43,19 +43,24 @@ $(function() {
     
     }, 1000);
   
+    $(function() {
       function upslide() {
-          var h = $('#ticker').find('tbody > tr').outerHeight(); 
-          
-          var item = $('#ticker').find('tbody > tr:first-child'); 
-          var itemClone = item.clone(); 
-          $('#ticker > tbody').append(itemClone);
-          
-          $('#ticker_wrap').css({'top':0}).animate({'top': '-' + h +'px'}, function(){ 
-              $('#ticker_wrap').css({'top': 0}); 
-              item.remove(); 
-          }); 
+        var h = $('#ticker tbody tr:first-child').outerHeight();
+        var $firstRow = $('#ticker tbody tr:first-child');
+        var $clone = $firstRow.clone();
+        $('#ticker tbody').append($clone);
+        
+        $('#ticker_wrap').animate({ top: '-' + h + 'px' }, 400, function() {
+          $(this).css('top', 0);
+          $firstRow.remove();
+          // 애니메이션이 끝난 후 1300ms 후에 다음 슬라이드를 실행 (총 주기 400 + 1300 = 1700ms)
+          setTimeout(upslide, 1300);
+        });
       }
-      setInterval(function(){upslide()}, 1700);
+      
+      // 첫 슬라이드 실행
+      upslide();
+    });
     
     })
   

@@ -1,333 +1,893 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="사업자대출, 소상공인대출, 법인대출, 스타트업대출, 기업대출">
+  <meta name="description" content="대출 거절로 힘드신 분들을 위한 신용점수 영향 없는 대출 지원">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="icon" href="img/favicon.png">
+ 
+  <title>근로자금융지원 (직장인/자영업자/사업자) 최저금리 안심대출</title>
 
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5HWXDD3V');</script>
-        <!-- End Google Tag Manager -->
+  <link href="./css/ionicons.min.css" rel="stylesheet" />
+  <link href="./css/font-awesome.min.css" rel="stylesheet" />
+  <style>
     
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDCSD8F6SD"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    
-        gtag('config', 'G-NDCSD8F6SD');
-        </script> 
-    
-    <!-- Event snippet for 대출신청전환 conversion page -->
-<script>
-    gtag('event', 'conversion', {
-        'send_to': 'AW-11061217748/7aSYCPLI5LkZENSTs5op',
-        'value': 30000.0,
-        'currency': 'KRW',
-        'transaction_id': ''
-    });
-  </script>
-  
-  <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1265976731051026');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1265976731051026&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
-        <!-- Danggeun Market Code -->
-<script src="https://karrot-pixel.business.daangn.com/0.2/karrot-pixel.umd.js"></script>
-<script>
-  window.karrotPixel.init('1719060872254500001');
-  window.karrotPixel.track('ViewPage');
-  window.karrotPixel.track('Purchase');
-</script>
-<!-- End Danggeun Market Code -->
-
-    
-
-    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/kas/static/kp.js"></script>
-    <script type="text/javascript">
-          kakaoPixel('2388658740341749490').pageView();
-          kakaoPixel('2388658740341749490').purchase('purchase');
-    </script>
-    
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    body{
+      margin:0;
+    }
 
 
-    <title>사업자금융지원</title>
+/* Header */
+.contents-time{
+    background: #03193b;
+    color: #ffffff;
+    padding: 6px 0 5px;
+    font-size: 0.7em;
+    text-align: center;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+}
+.contents-time p {
+    margin-bottom: 0;
+}
+.contents-time span {
+    font-weight: 600;
+    position: relative;
+    bottom: 3px;
+}
 
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
-   
-    <!-- style.css -->
-  
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/jquery.simplyscroll.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="./css/ionicons.min.css" rel="stylesheet" />
-    <link href="./css/font-awesome.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <meta name="keywords" content="사업자대출, 소상공인대출, 법인대출, 스타트업대출, 기업대출">
-    <meta name="description" content="대출 거절로 힘드신 분들을 위한 신용점수 영향 없는 대출 지원">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="icon" href="img/favicon.ico">
-   
+    #intro1{
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #0A4A87;
+      color: white;
+      text-align: center;
+    }
+
+    #intro1 .container {
+      padding: 20px;
+    }
+
+    #intro1 .title-section{
+      text-align: -webkit-center;
+    }
+
+    #intro1 .title-section h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    #intro1 .title-section p {
+      padding:8px 5px;
+      border:1px solid #fff;
+      max-width:370px;
+      border-radius:15px;
+      font-size:14px;
+    }
+
+    #intro1 .title-section .btn-check-limit {
+      background-color: #0076ec;
+      border:1px solid #0076ec;
+      color: white;
+      /* border: none; */
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 15px 0 20px;
+      transition:1.2s;
+      text-decoration: none;
+    }
+
+    #intro1 .title-section .btn-check-limit:hover {
+      
+      transition:1.2s;
+      background-color: #005bb5;
+      border:1px solid #ffffff49;
+      
+    }
+
+    #intro1 .highlight {
+      color: #FFE066;
+    }
+
+    #intro1 .scroll-wrapper {
+      background-color: white;
+      color: black;
+      overflow: hidden;
+      height: 280px; /* 70px * 4 */
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #intro1 .scroll-list {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    #intro1 .scroll-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+      padding: 0 15px;
+      background-color: white;
+      border-bottom: 1px solid #eee;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    #intro1 .profile-section {
+      display: flex;
+      align-items: center;
+    }
+
+    #intro1 .profile-icon {
+      width: 40px;
+      height: 40px;
+      background:url('./img/profile_gray.svg');
+      background-size: contain;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    #intro1 .profile-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 420px) {
+    #intro1 .profile-text span{
+      font-size:12px;
+    }
+
+    #intro1 .profile-text strong{
+      font-size:12px;
+    }
+  }
+
+    #intro1 .amount {
+      color: red;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #intro1 .info-section {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      background-color: #082C5B;
+      padding: 15px 0;
+      border-radius: 8px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #intro1 .info-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+    }
+
+    #intro1 .info-box strong {
+      color: #FFE066;
+      font-size: 20px;
+    }
+
+    #intro1 .info-box:not(:last-child) {
+      border-right: 1px solid white;
+    }
+
+    @media (max-width: 600px) {
+      #intro1 .info-box {
+        font-size: 14px;
+      }
+
+      #intro1 .info-box strong {
+        font-size: 18px;
+      }
+
+      #intro1 .title-section h1 {
+        font-size: 22px;
+      }
+    }
+
+
+</style>
+
+<style>
+  #footer { background: linear-gradient( #424242, #2a2a2a); padding: 3.125rem 0; color: #fff; text-align: center; font-weight:300; letter-spacing: -1px; line-height: 1.875rem; font-size: 1.25rem;}
+#footer p {color:#bfbfbf; }
+#footer address {color:#fff; margin-top: 3.125rem;}
+
+
+@media screen and (max-width: 1200px) {
+  #footer {padding:3rem 1.875rem;}
+  #footer p {font-size: 1rem; }
+}
+@media screen and (max-width: 1024px) {
+  #footer {padding:3rem 1.25rem;;}
+  #footer p {font-size: 0.8rem; }
+}
+@media screen and (max-width: 768px) {
+  #footer {padding:3rem 0.625rem;;}
+  #footer p {font-size: 0.7rem; }
+}
+@media screen and (max-width: 640px) {
+  #footer p {font-size: 0.4rem; }
+}
+</style>
+
 </head>
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HWXDD3V"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+  <!-- 1 -->
+  <div class="contents-time">
+    <p>&nbsp;<span class="typeText" style="font-size:1.4em;"></span>
+        <!-- <br><br>[ 마감 기한 | <span class="countVer02"></span> ] -->
+    </p>
+</div>
+   
+
+  <section id="intro1">
+    <div class="container">
+      <div class="title-section">
+        <br><Br><br><Br>
+        <!-- <p id="countdown">⏰ 혜택 마감 | 2025. 2. 20 ( 00시 00분 00초 남음 )</p> -->
+        <h1><span class="highlight">신청이 완료되었습니다.<br>빠르게 안내드리겠습니다.<br><br>전화로 안내가 진행되며<br>공휴일과 토,일 신청시<br>다음 평일 날에 안내가 진행됩니다.<br><br>근로자금융지원</span><br>최저금리 안심대출</h1>
+        <img src="./img/intro-ln1.jpeg" style="width:300px;"><br>
         
+      </div>
 
-    <div id="financePlan">
-      
+      <!-- <div class="scroll-wrapper">
+        <div class="scroll-list" id="scrollList"></div>
+      </div> -->
 
-
-
-        <div class="sc3" style="background-color: aliceblue;">
-            <div class="wrap">
-                <!-- <div class="subtit wow fadeInUp"></div> -->
-                <!-- I | A,S : PPL 을 활용하여 고객의 마음을 공감하고 -->
-                <h3 class="wow fadeInUp" style="line-height:140%;">상담 신청 감사합니다.<br>빠르게 전화로 연결드리겠습니다.<br><br>전화 상담으로 진행되니<br>꼭 받아주세요.</span><br><br>개인정보는 <span>철저히 보호</span>되며<br>신용 점수는 <span>어떤 영향도 없습니다.</span></h3>
-                <div style="text-align:-webkit-center;">
-                <img src="./img/lock.png" style="width:100%;max-width:600px;">
-                </div>
-            </div>
-        </div>
-
-        
-
-        <div class="footer">
-          
-            <div class="bottom">
-                <p>
-                    상호 : 제이와이원 대부중개 사업자등록번호 : 110111-7598133 대부업등록번호 : 2020-서울노원-0013 대부업등록기관 : 노원구 일자리경제과 02-2116-3484 대표 : 심재윤<br/>
-                    사업자 소재지 : 서울특별시노원구화랑로441,미라쉘301호(공릉동)<br/>
-                    <br/>
-                    이자율 : 연 20% 이내 (취급 수수료 없음, 등기비용 실비청구)<br/>
-                    중개수수료를 요구하거나 받는 것은 불법입니다. 과도한 빚, 고통의 시작입니다. 대출시 귀하의 신용등급이 하락될 수 있습니다.<br/>
-                    이 사이트에서 광고되는 상품들의 상환 기간은 모두 60일 이상이며 (최저 1년, 최대 5년) 최대 연 이자율은 20%입니다.<br/>
-                    대부이자율(연 이자율) 및 연체이자율은 연20%를 초과할 수 없습니다.<br/>
-                   <br/>
-                    <br/>
-                    Copyright © 사업자금융지원 All right reserved.
-                </p>
-            </div>
-        </div>
+      <div class="info-section">
+        <div class="info-box">금리<br><strong>최저 연 3.9%</strong></div>
+        <div class="info-box">한도<br><strong>최대 1억 원</strong><br>집·자동차 소유자는 한도 2배</div>
+        <div class="info-box">상환기간<br><strong>최장 10년</strong></div>
+      </div>
     </div>
+  </section>
 
 
 
-    <div id="privacy">
-        <div id="privacyContent">
-            <div class="titWrap">
-                <span>개인정보취급방침</span>
-                <i style="margin-top:-24px !important" class="ion-close-circled closeBtn"></i>
-            </div>
-            <div style="line-height:1.2" class="conWrap">
-                개인정보취급방침<br><br>
-                수집하는 개인정보의 항목<br>
-                "플로스"는 적법하고 공정한 수단에 의해서만 개인정보를 수집하며, 회원가입약관 또는 개인정보의 제공, 활용 동의서의 내용에 대해 이용자의 개인정보를 수집하는 경우에 당해<br> 이용자가 동의함 또는 동의하지 않음 버튼을 클릭 하는 등의 이용자의 동의를 얻는 절차를 거칩니다.<br>
-                <br>
-                수집하는 개인정보 항목<br>
-                회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
-        
-                ● 수집항목 : 이름 , 휴대전화번호 , 담보여부, 통화시간, 문의사항 등 개인맞춤 서비스를 제공하기 위해 수집됩니다.<br>
-                ● 개인정보 수집방법 : 홈페이지(회원가입.상담게시판.) , 전화를 통한 고객상담.<br>
-                <br>
-                개인정보의 수집 및 이용목적<br>
-                회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br><br>
-        
-                ● 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산<br>
-                콘텐츠 제공 , 금융거래 본인 인증 및 금융 서비스<br><br>
-                ● 회원 관리<br>
-                개인 식별 , 고지사항 전달<br><br>
-                ● 마케팅 및 광고에 활용<br>
-                이벤트 등 광고성 정보 전달<br><br>
-        
-                개인정보의 보유 및 이용기간><br>
-                원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br><br>
-        
-                보존 항목 : 이름 , 휴대전화번호 , 필요시기, 직업구분, 대출신청종류 등.<br>
-                보존 근거 : 고객의요청이 있을시 즉시폐기<br>
-                보존 기간 : 3년<br><br>
-        
-                그리고 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 아래와 같이 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다.<br><br>
-        
-                소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래등에서의 소비자보호에 관한 법률)<br>
-                신용정보의 수집/처리 및 이용 등에 관한 기록 : 3년 (신용정보의 이용 및 보호에 관한 법률)<br><br>
-        
-                개인정보의 파기절차 및 방법<br>
-                회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.<br><br>
-        
-                ● 파기절차<br>
-                회원님이 회원가입 등을 위해 입력하신 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정 기간 저장된 후 파기되어집니다.<br><br>
-        
-                별도 DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 보유되어지는 이외의 다른 목적으로 이용되지 않습니다.<br><br>
-        
-                ● 파기방법<br>
-                - 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.<br>
-                - 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.<br><br>
-        
-                
-                이용자 및 법정대리인의 권리와 그 행사방법<br>
-                이용자는 언제든지 등록되어 있는 자신의 개인정보를 조회하거나 수정할 수 있으며 가입해지를 요청할 수도 있습니다.<br><br>
-        
-                이용자들의 개인정보 조회,수정을 위해서는 '개인정보변경'(또는 '회원정보수정' 등)을 가입해지(동의철회)를 위해서는 "회원탈퇴"를 클릭하여 본인 확인 절차를 거치신 후 직접 열람, 정정 또는 탈퇴가 가능합니다.<br><br>
-        
-                혹은 개인정보관리책임자에게 서면, 전화 또는 이메일로 연락하시면 지체없이 조치하겠습니다.<br><br>
-        
-                귀하가 개인정보의 오류에 대한 정정을 요청하신 경우에는 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다. 또한 잘못된 개인정보를 제3자에게 이미 제공한 경우에는 정정 처리결과를 제3자에게 지체없이 통지하여 정정이 이루어지도록 하겠습니다.<br><br>
-        
-                회사는 이용자의 요청에 의해 해지 또는 삭제된 개인정보는 "회사가 수집하는 개인정보의 보유 및 이용기간"에 명시된 바에 따라 처리하고 그 외의 용도로 열람 또는 이용할 수 없도록 처리하고 있습니다.<br><br>
-        
-        
-                개인정보에 관한 민원서비스<br>
-                회사는 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보관리책임자를 지정하고 있습니다.<br>
-                <br>
-            귀하께서는 회사의 서비스를 이용하시며 발생하는 모든 개인정보보호 관련 민원을 개인정보관리책임자 혹은 담당부서로 신고하실 수 있습니다. 회사는 이용자들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다.<br><br>
-        
-                기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.<br>
-                1.개인분쟁조정위원회 (https://www.1336.or.kr/1336)<br>
-                2.정보보호마크인증위원회 (https://www.eprivacy.or.kr/02-580-0533~4)<br>
-                3.대검찰청 인터넷범죄수사센터 (02-3480-3600)<br>
-                4.경찰청 사이버테러대응센터 (https://www.ctrc.go.kr/02-392-0330)<br />
-                <br />
+<footer id="footer">
+  <img src="./img/favicon.png" style="width:40px;vertical-align: bottom;">근로자금융지원<br>
+  대출금리 : 연 ~20%이내 (담보대출에 한해 심사기준에 따라 차등적용)<br>
+연체이율 : 연 ~20% 이내 대출중개 수수료 없음<br><br>
 
-            </div>
-        </div>
-    </div>
+중개수수료를 요구하거나 받는것은 불법으로 대출과 관련된 일체 수수료를 받지 않습니다.<br>
+취급수수료 등 기타부대비용 없음 / 상환방법 : 원리금균등상환방식, 만기일시상환방식<br><br>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/count-1day.js" ></script>
-    <script src="./js/form.js"></script>
-    <script src="./js/validation-test.js"></script>
-    <script src="js/personal.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/jquery.simplyscroll.min.js"></script>
-    <script>
-        $(function(){
-            //animation
-            new WOW().init();
+이자 외 추가비용 없음 단, 일부 담보대출상품에 한해 저당설정, 해지비용 및 조기상환수수료가 발생할수 있습니다.<br>
+단 이자와 조기상환 수수료의 합산액은 20%를 초과하지 않음. 이 사이트에서 광고되는 상품들의 상환기간은 모두 60일 이상이며 최장 상환기간 120개월 미만입니다.<br><br>
+
+대출 총 비용 예시는 다음과 같습니다.<br>
+1,000,000원을 12개월 동안 이자 20%, 최대 이자율 20%로 대출할 시 총 상환금액은 1,111,614원 입니다. (대출 상품에 따라 달라질 수 있습니다.)<br><br>
+
+근로자 최저금리 안심대출 상담은 100% 무료이며 신용점수에 전혀 영향을 주지 않습니다.<br>
+과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다. 대출 시 귀하의 신용등급이 하락할 수 있습니다.<br><Br>
+  상호 : 제이와이원 대부중개 | 사업자등록번호 : 110111-7598133 | 대부업등록번호 : 2020-서울노원-0013 | 대부업등록기관 : 노원구 일자리경제과 02-2116-3484 | 
+  대표 : 심재윤 | 사업자 소재지 : 서울특별시노원구화랑로441,미라쉘301호(공릉동)<br/>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./js/count-1day.js" ></script>
+<script src="./js/form.js"></script>
+<script src="./js/validation-test.js"></script>
+<script src="js/personal.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/jquery.simplyscroll.min.js"></script>
+<script>
+    $(function(){
+        //animation
+        new WOW().init();
 
 
-            // sc1_swiper
-            var swiper1 = new Swiper('.swiper-container.sc1_swiper', {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                autoplay: {
-                    delay: 2500,
-                },
-                speed: 500,
-                effect: "fade",
-                autoplayDisableOnInteraction: false,
-                loop: true,
-                navigation: {
-                    nextEl: ".sc1_swiper .swiper-button-next",
-                    prevEl: ".sc1_swiper .swiper-button-prev",
-                },
-                on: {
-                    slideChange: function () {
-                        $('.tagWrap .Rtag').eq(swiper1.realIndex).addClass('on').siblings().removeClass('on')
-                    }
+        // sc1_swiper
+        var swiper1 = new Swiper('.swiper-container.sc1_swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoplay: {
+                delay: 2500,
+            },
+            speed: 500,
+            effect: "fade",
+            autoplayDisableOnInteraction: false,
+            loop: true,
+            navigation: {
+                nextEl: ".sc1_swiper .swiper-button-next",
+                prevEl: ".sc1_swiper .swiper-button-prev",
+            },
+            on: {
+                slideChange: function () {
+                    $('.tagWrap .Rtag').eq(swiper1.realIndex).addClass('on').siblings().removeClass('on')
                 }
-            });
+            }
+        });
 
-            $('.tagWrap .Rtag').on('click',function(){
-                var tagNum = $(this).index();
-                $(this).addClass('on').siblings().removeClass('on')
-                swiper1.slideTo(tagNum + 1)
-            })
-
-
-            // sc5_swiper
-            var swiper2 = new Swiper('.swiper-container.sc5_swiper', {
-                direction: "vertical",
-                slidesPerView: 8,
-                spaceBetween: 0,
-                autoplay: {
-                    delay: 2500,
-                },
-                speed: 800,
-                autoplayDisableOnInteraction: false,
-                loop: true,
-                allowTouchMove: false,
-            });
-
-            //sc6_swiper
-            var swiper3 = new Swiper('.sc6_swiper .swiper-container', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                // autoplay: {
-                //     delay: 3000,
-                // },
-                autoplay:false,
-                speed: 500,
-                // effect: "fade",
-                autoplayDisableOnInteraction: false,
-                loop: true,
-                navigation: {
-                    nextEl: ".sc6_swiper .swiper-button-next",
-                    prevEl: ".sc6_swiper .swiper-button-prev",
-                },
-                breakpoints: {
-                    1024: {
-                        slidesPerView: 1,
-                    },
-                },
-            });
-            $('.ani01').addClass('show');
-
-
-            //tab
-            $('.tab .tabBtnWrap .btn').on('click',function(){
-                var btnNum = $(this).index()
-
-                $(this).addClass('on').siblings().removeClass('on')
-                $('.conWrap .con').eq(btnNum).addClass('on').siblings().removeClass('on')
-            })
-
-
-            // footer scroll
-            $("#scroller").simplyScroll({
-                pauseOnHover: true,
-                speed: 1,
-                auto: true,
-                autoMode: 'loop'
-            });
-
+        $('.tagWrap .Rtag').on('click',function(){
+            var tagNum = $(this).index();
+            $(this).addClass('on').siblings().removeClass('on')
+            swiper1.slideTo(tagNum + 1)
         })
 
 
+        // sc5_swiper
+        var swiper2 = new Swiper('.swiper-container.sc5_swiper', {
+            direction: "vertical",
+            slidesPerView: 8,
+            spaceBetween: 0,
+            autoplay: {
+                delay: 2500,
+            },
+            speed: 800,
+            autoplayDisableOnInteraction: false,
+            loop: true,
+            allowTouchMove: false,
+        });
+
+        //sc6_swiper
+        var swiper3 = new Swiper('.sc6_swiper .swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            // autoplay: {
+            //     delay: 3000,
+            // },
+            autoplay:false,
+            speed: 500,
+            // effect: "fade",
+            autoplayDisableOnInteraction: false,
+            loop: true,
+            navigation: {
+                nextEl: ".sc6_swiper .swiper-button-next",
+                prevEl: ".sc6_swiper .swiper-button-prev",
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+        $('.ani01').addClass('show');
+
+
+        //tab
+        $('.tab .tabBtnWrap .btn').on('click',function(){
+            var btnNum = $(this).index()
+
+            $(this).addClass('on').siblings().removeClass('on')
+            $('.conWrap .con').eq(btnNum).addClass('on').siblings().removeClass('on')
+        })
+
+
+        // footer scroll
+        $("#scroller").simplyScroll({
+            pauseOnHover: true,
+            speed: 1,
+            auto: true,
+            autoMode: 'loop'
+        });
+
+    })
 
 
 
-    </script>
 
+
+</script>
+
+  <!--intro script-->
+  <script>
+    const applicants = [
+      { batch: '신규대출', name: '50대/사업자/신용점수 868점', amount: '8000만원' },
+      { batch: '대환대출', name: '30대/직장인/신용점수 603점', amount: '5900만원' },
+      { batch: '담보대출', name: '40대/직장인/신용점수 768점', amount: '4300만원' },
+      { batch: '신규대출', name: '20대/직장인/신용점수 680점', amount: '3500만원' },
+      { batch: '대환대출', name: '50대/자영업자/신용점수 708점', amount: '7500만원' },
+      { batch: '신규대출', name: '40대/사업자/신용점수 676점', amount: '2900만원' },
+      { batch: '자동차대출', name: '30대/직장인/신용점수 720점', amount: '4500만원' },
+      { batch: '신규대출', name: '60대/사업자/신용점수 650점', amount: '6200만원' },
+      { batch: '대환대출', name: '40대/자영업자/신용점수 710점', amount: '5400만원' },
+      { batch: '담보대출', name: '50대/직장인/신용점수 780점', amount: '6800만원' },
+      { batch: '자동차대출', name: '20대/직장인/신용점수 690점', amount: '3200만원' },
+      { batch: '신규대출', name: '30대/자영업자/신용점수 720점', amount: '4700만원' },
+      { batch: '대환대출', name: '60대/직장인/신용점수 800점', amount: '8000만원' },
+      { batch: '담보대출', name: '40대/사업자/신용점수 660점', amount: '3900만원' },
+      { batch: '자동차대출', name: '50대/직장인/신용점수 750점', amount: '5100만원' },
+      { batch: '신규대출', name: '20대/자영업자/신용점수 700점', amount: '3300만원' }
+    ];
+
+    const scrollList = document.getElementById('scrollList');
+
+    function renderList() {
+      applicants.concat(applicants).forEach(applicant => {
+        const item = document.createElement('div');
+        item.className = 'scroll-item';
+        item.innerHTML = `
+          <div class="profile-section">
+            <div class="profile-icon"></div>
+            <div class="profile-text">
+              <span>${applicant.batch}</span>
+              <strong>${applicant.name}</strong>
+            </div>
+          </div>
+          <div class="amount">${applicant.amount}</div>
+        `;
+        scrollList.appendChild(item);
+      });
+    }
+
+    function startScroll() {
+      let position = 0;
+      const itemHeight = 70;
+      setInterval(() => {
+        position -= itemHeight;
+        scrollList.style.transition = 'transform 0.6s ease';
+        scrollList.style.transform = `translateY(${position}px)`;
+
+        if (Math.abs(position) >= scrollList.scrollHeight / 2) {
+          setTimeout(() => {
+            position = 0;
+            scrollList.style.transition = 'none';
+            scrollList.style.transform = `translateY(${position}px)`;
+          }, 600);
+        }
+      }, 2500);
+    }
+
+    renderList();
+    startScroll();
+  </script>
+
+
+<script>
+  const applicants1 = [
+    { batch: '신규대출', name: '50대/사업자/신용점수 868점', amount: '8000만원' },
+    { batch: '대환대출', name: '30대/직장인/신용점수 603점', amount: '5900만원' },
+    { batch: '담보대출', name: '40대/직장인/신용점수 768점', amount: '4300만원' },
+    { batch: '신규대출', name: '20대/직장인/신용점수 680점', amount: '3500만원' },
+    { batch: '대환대출', name: '50대/자영업자/신용점수 708점', amount: '7500만원' },
+    { batch: '신규대출', name: '40대/사업자/신용점수 676점', amount: '2900만원' },
+    { batch: '자동차대출', name: '30대/직장인/신용점수 720점', amount: '4500만원' },
+    { batch: '신규대출', name: '60대/사업자/신용점수 650점', amount: '6200만원' },
+    { batch: '대환대출', name: '40대/자영업자/신용점수 710점', amount: '5400만원' },
+    { batch: '담보대출', name: '50대/직장인/신용점수 780점', amount: '6800만원' },
+    { batch: '자동차대출', name: '20대/직장인/신용점수 690점', amount: '3200만원' },
+    { batch: '신규대출', name: '30대/자영업자/신용점수 720점', amount: '4700만원' },
+    { batch: '대환대출', name: '60대/직장인/신용점수 800점', amount: '8000만원' },
+    { batch: '담보대출', name: '40대/사업자/신용점수 660점', amount: '3900만원' },
+    { batch: '자동차대출', name: '50대/직장인/신용점수 750점', amount: '5100만원' },
+    { batch: '신규대출', name: '20대/자영업자/신용점수 700점', amount: '3300만원' }
+  ];
+
+  const scrollList1 = document.getElementById('scrollList1');
+
+  function renderList1() {
+    applicants1.concat(applicants1).forEach(applicant1 => {
+      const item = document.createElement('div');
+      item.className = 'scroll-item';
+      item.innerHTML = `
+        <div class="profile-section">
+          <div class="profile-icon"></div>
+          <div class="profile-text">
+            <span>${applicant1.batch}</span>
+            <strong>${applicant1.name}</strong>
+          </div>
+        </div>
+        <div class="amount">${applicant1.amount}</div>
+      `;
+      scrollList1.appendChild(item);
+    });
+  }
+
+  function startScroll1() {
+    let position = 0;
+    const itemHeight = 70;
+    setInterval(() => {
+      position -= itemHeight;
+      scrollList1.style.transition = 'transform 0.6s ease';
+      scrollList1.style.transform = `translateY(${position}px)`;
+
+      if (Math.abs(position) >= scrollList1.scrollHeight / 2) {
+        setTimeout(() => {
+          position = 0;
+          scrollList1.style.transition = 'none';
+          scrollList1.style.transform = `translateY(${position}px)`;
+        }, 600);
+      }
+    }, 2500);
+  }
+
+  renderList1();
+  startScroll1();
+</script>
+
+
+
+<script>
+  const countdownElement = document.getElementById('countdown');
+
+  function updateCountdown() {
+    const now = new Date();
+    const deadline = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0); // 다음 날 00:00:00
+    const diff = deadline - now;
+
+    if (diff <= 0) {
+      countdownElement.textContent = '혜택이 종료되었습니다.';
+      return;
+    }
+
+    const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+    const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+    const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+    countdownElement.textContent = `⏰ 혜택 마감 | ${now.getFullYear()}. ${now.getMonth() + 1}. ${now.getDate()} ( ${hours}시 ${minutes}분 ${seconds}초 남음 )`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+<script>
+  const countdownElement3 = document.getElementById('countdown3');
+
+  function updateCountdown3() {
+    
+    const now = new Date();
+    const deadline = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0); // 다음 날 00:00:00
+    const diff = deadline - now;
+
+    if (diff <= 0) {
+      countdownElement3.textContent = '혜택이 종료되었습니다.';
+      return;
+    }
+
+    const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+    const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+    const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+    countdownElement3.textContent = `⏰ 혜택 마감 | ${now.getFullYear()}. ${now.getMonth() + 1}. ${now.getDate()} ( ${hours}시 ${minutes}분 ${seconds}초 남음 )`;
+  }
+
+  setInterval(updateCountdown3, 1000);
+  updateCountdown3();
+</script>
+
+
+<!--end - intro script-->
+
+<script>
+  // 슬라이드 트랙과 슬라이드, 점(Dot) 컨테이너 선택 (여기서는 #hg-slide 내의 요소들)
+  const track = document.querySelector('#hg-slide .hg-slide-track');
+  const slides = Array.from(track.children);
+  const dotsContainer = document.querySelector('#hg-slide .hg-slide-dots');
+  
+  let currentIndex = 0;
+  let startPos = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let isDragging = false;
+  let animationID;
+  let autoSlideInterval;
+
+  // 점(dot) 업데이트
+  function updateDots() {
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, index) => {
+      const dot = document.createElement('span');
+      dot.classList.add('hg-slide-dot');
+      if (index === currentIndex) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  // 슬라이드 래퍼의 높이를 현재 슬라이드에 맞게 조정
+  function updateSlideHeight() {
+    const wrapper = document.querySelector('#hg-slide .hg-slide-wrapper');
+    const currentSlide = slides[currentIndex];
+    wrapper.style.height = `${currentSlide.scrollHeight}px`;
+  }
+
+  // 슬라이드 이동 함수
+  function goToSlide(index) {
+    currentIndex = index;
+    currentTranslate = -currentIndex * track.offsetWidth;
+    prevTranslate = currentTranslate;
+    setSliderPosition();
+    updateSlideHeight(); // 이동 후 즉시 높이 조정
+    updateDots();
+  }
+
+  function setSliderPosition() {
+    track.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  // 드래그 시작 시
+  function startPosition(e) {
+    isDragging = true;
+    startPos = getPositionX(e);
+    track.classList.add('grabbing');
+    cancelAnimationFrame(animationID);
+  }
+
+  // 드래그 이동 시
+  function movePosition(e) {
+    if (!isDragging) return;
+    const currentPosition = getPositionX(e);
+    currentTranslate = prevTranslate + currentPosition - startPos;
+    setSliderPosition();
+  }
+
+  // 드래그 종료 시 (마우스 업, 터치 종료)
+  function endPosition() {
+    isDragging = false;
+    track.classList.remove('grabbing');
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -50 && currentIndex < slides.length - 1) currentIndex++;
+    if (movedBy > 50 && currentIndex > 0) currentIndex--;
+
+    goToSlide(currentIndex);
+    updateSlideHeight(); // 높이 유지
+  }
+
+  // 이벤트에서 x좌표를 가져오는 헬퍼 함수 (마우스와 터치 모두 대응)
+  function getPositionX(e) {
+    return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+  }
+
+  // 자동 슬라이드 시작
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      goToSlide(currentIndex);
+    }, 5000);
+  }
+
+  // 자동 슬라이드 중지
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  // 마우스 이벤트
+  track.addEventListener('mousedown', startPosition);
+  track.addEventListener('mousemove', movePosition);
+  track.addEventListener('mouseup', endPosition);
+  track.addEventListener('mouseleave', endPosition);
+  track.addEventListener('mouseenter', stopAutoSlide);
+  track.addEventListener('mouseleave', startAutoSlide);
+
+  // 터치 이벤트 (터치 시 자동 슬라이드 중지, 터치 종료 후 다시 시작)
+  track.addEventListener('touchstart', (e) => {
+    startPosition(e);
+    stopAutoSlide();
+  });
+  track.addEventListener('touchmove', movePosition);
+  track.addEventListener('touchend', (e) => {
+    endPosition(e);
+    startAutoSlide();
+  });
+
+  updateDots();
+  updateSlideHeight(); // 초기 높이 설정
+  startAutoSlide();
+</script>
+
+<script>
+  function animateGraph() {
+    const formSection = document.getElementById('graph');
+    const redBar = formSection.querySelector('#redBar');
+      redBar.style.height = '120px'; // 비율 조정 (16만원이 약 40% 절감)
+  }
+
+  
+
+  function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+
+  function handleScroll() {
+    const formSection = document.getElementById('graph');
+    const redBar = formSection.querySelector('#redBar');
+      if (isElementInViewport(redBar)) {
+          animateGraph();
+          window.removeEventListener('scroll', handleScroll);
+      }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll);
+</script>
+
+
+<script>
+ function animateGraph1() {
+      const formSection = document.getElementById('limit-graph');
+      const redBar = formSection.querySelector('#redBar');
+      redBar.style.height = '170px'; // 비율 조정 (16만원이 약 40% 절감)
+  }
+
+  function isElementInViewport1(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+
+  function handleScroll1() {
+    const formSection = document.getElementById('limit-graph');
+    const redBar = formSection.querySelector('#redBar');
+      if (isElementInViewport(redBar)) {
+          animateGraph1();
+          window.removeEventListener('scroll', handleScroll);
+      }
+  }
+
+  window.addEventListener('scroll', handleScroll1);
+  window.addEventListener('load', handleScroll1);
+</script>
+
+<script>
+  function animateGraph3() {
+      const formSection = document.getElementById('interest-graph');
+      const redBar = formSection.querySelector('#redBar');
+      redBar.style.height = '50px'; // 비율 조정 (16만원이 약 40% 절감)
+  }
+
+  function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+
+  function handleScroll3() {
+      const redBar = document.getElementById('redBar');
+      if (isElementInViewport(redBar)) {
+          animateGraph3();
+          window.removeEventListener('scroll', handleScroll3);
+      }
+  }
+
+  window.addEventListener('scroll', handleScroll3);
+  window.addEventListener('load', handleScroll3);
+</script>
+
+<script>
+  function animateGraph4() {
+      const formSection = document.getElementById('submit-graph');
+      const redBar = formSection.querySelector('#redBar');
+      redBar.style.height = '170px'; // 비율 조정 (16만원이 약 40% 절감)
+  }
+
+  function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+
+  function handleScroll4() {
+      const redBar = document.getElementById('redBar');
+      if (isElementInViewport(redBar)) {
+          animateGraph4();
+          window.removeEventListener('scroll', handleScroll4);
+      }
+  }
+
+  window.addEventListener('scroll', handleScroll4);
+  window.addEventListener('load', handleScroll4);
+</script>
+
+<script>
+  var typeText = document.querySelector(".typeText")
+var textToBeTyped = "사업자 세금 환급금"
+var textToBeTypedArr = [" 직장인/신용점수 650점 : 50,000,000원 대출 승인",  "사업자/신용점수 720점 : 78,000,000원 대출 승인", "직장인/신용점수 603점 : 59,000,000원 대출 승인","사업자/신용점수 632점 : 28,000,000원 대출 승인","사업자/신용점수 840점 : 90,000,000원 대출 승인", "직장인/신용점수 691점 : 33,000,000원 대출 승인"]
+var index = 0, isAdding = true, textToBeTypedIndex = 0
+
+function playAnim() {
+setTimeout(function () {
+// set the text of typeText to a substring of the text to be typed using index.
+typeText.innerText = textToBeTypedArr[textToBeTypedIndex].slice(0, index)
+if (isAdding) {
+// adding text
+if (index > textToBeTypedArr[textToBeTypedIndex].length) {
+// no more text to add
+isAdding = false
+//break: wait 2s before playing again
+setTimeout(function () {
+playAnim()
+}, 2000)
+return
+} else {
+// increment index by 1
+index++
+}
+} else {
+// removing text
+if (index === 0) {
+// no more text to remove
+isAdding = true
+//switch to next text in text array
+textToBeTypedIndex = (textToBeTypedIndex + 1) % textToBeTypedArr.length
+} else {
+// decrement index by 1
+index--
+}
+}
+// call itself
+playAnim()
+}, isAdding ? 65 : 35)
+}
+// start animation
+playAnim();
+ </script>
+
+<script>
+  function chk_num(obj){obj.value=obj.value.replace(/[^0-9]/g,'');}
+
+  $(document).ready(function ($) {
+      $(".scroll").click(function(event){ event.preventDefault(); $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500); });
+
+      $("#scroller").simplyScroll({
+          pauseOnHover: true,
+          speed: 1,
+          auto: true,
+          autoMode: 'loop'
+      });
+
+      $(".btn-show").click(function (e) {
+          $(".agreement").toggle();
+          return false;
+      });
+      
+      new WOW().init();
+
+      $('.counter').counterUp({delay: 10, time: 1000});
+  });
+</script>
+
+<script type="text/javascript"> 
+// F12 버튼 방지 
+$(document).ready(function(){ 
+$(document).bind('keydown',function(e){ 
+if ( e.keyCode == 123 /* F12 */) { 
+  e.preventDefault(); 
+  e.returnValue = false; 
+          $(window).scrollTop(0);
+           window.location.reload();
+} 
+}); 
+}); 
+
+// 우측 클릭 방지 
+document.onmousedown=disableclick; 
+status="Right click is not available."; 
+function disableclick(event){ 
+if (event.button==2) { 
+alert(status); 
+      $(window).scrollTop(0);
+  window.location.reload();
+return false; 
+} 
+} 
+</script> 
+  
 </body>
 </html>
