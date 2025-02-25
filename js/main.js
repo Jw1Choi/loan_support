@@ -167,117 +167,117 @@ setInterval(updateCountdown3, 1000);
 updateCountdown3();
 
 /***** 슬라이드 *****/
-const track = document.querySelector('#hg-slide .hg-slide-track');
-const slides = Array.from(track.children);
-const dotsContainer = document.querySelector('#hg-slide .hg-slide-dots');
+// const track = document.querySelector('#hg-slide .hg-slide-track');
+// const slides = Array.from(track.children);
+// const dotsContainer = document.querySelector('#hg-slide .hg-slide-dots');
 
-let currentIndex = 0;
-let startPos = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
-let isDragging = false;
-let autoSlideInterval;
+// let currentIndex = 0;
+// let startPos = 0;
+// let currentTranslate = 0;
+// let prevTranslate = 0;
+// let isDragging = false;
+// let autoSlideInterval;
 
-// 점(dot) 업데이트
-function updateDots() {
-  dotsContainer.innerHTML = '';
-  slides.forEach((_, index) => {
-    const dot = document.createElement('span');
-    dot.classList.add('hg-slide-dot');
-    if (index === currentIndex) dot.classList.add('active');
-    dot.addEventListener('click', () => goToSlide(index));
-    dotsContainer.appendChild(dot);
-  });
-}
 
-// 슬라이드 래퍼의 높이를 현재 슬라이드에 맞게 조정
-function updateSlideHeight() {
-  const wrapper = document.querySelector('#hg-slide .hg-slide-wrapper');
-  const currentSlide = slides[currentIndex];
-  wrapper.style.height = `${currentSlide.scrollHeight}px`;
-}
+// function updateDots() {
+//   dotsContainer.innerHTML = '';
+//   slides.forEach((_, index) => {
+//     const dot = document.createElement('span');
+//     dot.classList.add('hg-slide-dot');
+//     if (index === currentIndex) dot.classList.add('active');
+//     dot.addEventListener('click', () => goToSlide(index));
+//     dotsContainer.appendChild(dot);
+//   });
+// }
 
-// 슬라이드 이동 함수
-function goToSlide(index) {
-  currentIndex = index;
-  currentTranslate = -currentIndex * track.offsetWidth;
-  prevTranslate = currentTranslate;
-  setSliderPosition();
-  updateSlideHeight(); 
-  updateDots();
-}
 
-function setSliderPosition() {
-  track.style.transform = `translateX(${currentTranslate}px)`;
-}
+// function updateSlideHeight() {
+//   const wrapper = document.querySelector('#hg-slide .hg-slide-wrapper');
+//   const currentSlide = slides[currentIndex];
+//   wrapper.style.height = `${currentSlide.scrollHeight}px`;
+// }
 
-// 드래그 시작 시
-function startPosition(e) {
-  isDragging = true;
-  startPos = getPositionX(e);
-  track.classList.add('grabbing');
-  cancelAnimationFrame(autoSlideInterval);
-}
 
-// 드래그 이동 시
-function movePosition(e) {
-  if (!isDragging) return;
-  const currentPosition = getPositionX(e);
-  currentTranslate = prevTranslate + currentPosition - startPos;
-  setSliderPosition();
-}
+// function goToSlide(index) {
+//   currentIndex = index;
+//   currentTranslate = -currentIndex * track.offsetWidth;
+//   prevTranslate = currentTranslate;
+//   setSliderPosition();
+//   updateSlideHeight(); 
+//   updateDots();
+// }
 
-// 드래그 종료 시
-function endPosition() {
-  isDragging = false;
-  track.classList.remove('grabbing');
-  const movedBy = currentTranslate - prevTranslate;
+// function setSliderPosition() {
+//   track.style.transform = `translateX(${currentTranslate}px)`;
+// }
 
-  if (movedBy < -50 && currentIndex < slides.length - 1) currentIndex++;
-  if (movedBy > 50 && currentIndex > 0) currentIndex--;
 
-  goToSlide(currentIndex);
-  updateSlideHeight();
-}
+// function startPosition(e) {
+//   isDragging = true;
+//   startPos = getPositionX(e);
+//   track.classList.add('grabbing');
+//   cancelAnimationFrame(autoSlideInterval);
+// }
 
-function getPositionX(e) {
-  return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-}
 
-// 자동 슬라이드
-function startAutoSlide() {
-  autoSlideInterval = setInterval(() => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    goToSlide(currentIndex);
-  }, 5000);
-}
+// function movePosition(e) {
+//   if (!isDragging) return;
+//   const currentPosition = getPositionX(e);
+//   currentTranslate = prevTranslate + currentPosition - startPos;
+//   setSliderPosition();
+// }
 
-function stopAutoSlide() {
-  clearInterval(autoSlideInterval);
-}
 
-// 이벤트
-track.addEventListener('mousedown', startPosition);
-track.addEventListener('mousemove', movePosition);
-track.addEventListener('mouseup', endPosition);
-track.addEventListener('mouseleave', endPosition);
-track.addEventListener('mouseenter', stopAutoSlide);
-track.addEventListener('mouseleave', startAutoSlide);
+// function endPosition() {
+//   isDragging = false;
+//   track.classList.remove('grabbing');
+//   const movedBy = currentTranslate - prevTranslate;
 
-// 터치 이벤트
-track.addEventListener('touchstart', (e) => {
-  startPosition(e);
-  stopAutoSlide();
-});
-track.addEventListener('touchmove', movePosition);
-track.addEventListener('touchend', (e) => {
-  endPosition(e);
-  startAutoSlide();
-});
+//   if (movedBy < -50 && currentIndex < slides.length - 1) currentIndex++;
+//   if (movedBy > 50 && currentIndex > 0) currentIndex--;
 
-updateDots();
-updateSlideHeight();
-startAutoSlide();
+//   goToSlide(currentIndex);
+//   updateSlideHeight();
+// }
+
+// function getPositionX(e) {
+//   return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+// }
+
+
+// function startAutoSlide() {
+//   autoSlideInterval = setInterval(() => {
+//     currentIndex = (currentIndex + 1) % slides.length;
+//     goToSlide(currentIndex);
+//   }, 5000);
+// }
+
+// function stopAutoSlide() {
+//   clearInterval(autoSlideInterval);
+// }
+
+
+// track.addEventListener('mousedown', startPosition);
+// track.addEventListener('mousemove', movePosition);
+// track.addEventListener('mouseup', endPosition);
+// track.addEventListener('mouseleave', endPosition);
+// track.addEventListener('mouseenter', stopAutoSlide);
+// track.addEventListener('mouseleave', startAutoSlide);
+
+
+// track.addEventListener('touchstart', (e) => {
+//   startPosition(e);
+//   stopAutoSlide();
+// });
+// track.addEventListener('touchmove', movePosition);
+// track.addEventListener('touchend', (e) => {
+//   endPosition(e);
+//   startAutoSlide();
+// });
+
+// updateDots();
+// updateSlideHeight();
+// startAutoSlide();
 
 /***** 그래프 애니메이션 1 *****/
 function animateGraph() {
