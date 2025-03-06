@@ -1,0 +1,203 @@
+<style>
+    /* ====== 기본 스타일 (원본 유지) ====== */
+    #boxDetail {
+      padding: 120px 0;
+      background: #fff;
+    }
+    #boxDetail .contain {
+      padding: 0 50px;
+    }
+    #boxDetail .contain .tit {
+      color: #004592;
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 2rem;
+    }
+    #boxDetail .contain .tit span {
+      display: inline-block;
+      width: 5px;
+      height: 20px;
+    }
+    #boxDetail .contain .con {
+      background: #f9f9f9;
+      margin-bottom: 2rem;
+      padding: 2rem;
+    }
+    #boxDetail .table {
+      display: table;
+      border-top: 3px solid #004592;
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+    #boxDetail .table dl {
+      display: table-row;
+      border-bottom: 1px solid #ccc;
+    }
+    #boxDetail .table dl dt {
+      display: table-cell;
+      background: #f2faff;
+      color: #004592;
+      padding: 1.5rem 2rem;
+      text-align: left;
+      line-height: 160%;
+      width: 80px;
+    }
+    #boxDetail .table dl dd {
+      display: table-cell;
+      padding: 1.5rem;
+      text-align: left;
+      color: #444;
+      line-height: 160%;
+    }
+    #boxDetail .table dl dd span.red {
+      color: #ff0000;
+    }
+    #boxDetail .table dl dd span.blue {
+      color: #0000ff;
+    }
+    
+    #boxCommon dl {
+      display: block;
+      border-bottom: 1px solid #ccc;
+    }
+    #boxCommon dl dt {
+      display: block;
+      color: #004592;
+      font-weight: 500;
+      font-size: 24px;
+      padding: 1.5rem 2rem;
+      text-align: left;
+      line-height: 44px;
+      cursor: pointer;
+    }
+    #boxCommon dl dt i {
+      float: right;
+      line-height: 44px;
+      color: #004592;
+    }
+    #boxCommon dl dt i.fa-chevron-down {
+      color: #444;
+    }
+    #boxCommon dl dd {
+      display: none;
+      color: #444;
+      font-weight: 400;
+      font-size: 16px;
+      padding: 0 2rem 1.5rem 2rem;
+      text-align: left;
+      line-height: 160%;
+    }
+    #boxCommon dl dd.on {
+      display: block;
+    }
+    #boxCommon dl dd div {
+      margin-bottom: 1rem;
+    }
+    
+    /* ====== 모바일 대응 스타일 ====== */
+    @media (max-width: 768px) {
+      /* 전체 패딩, 폰트 크기 축소 등 */
+      #boxDetail {
+        padding: 60px 0;
+      }
+      #boxDetail .contain {
+        padding: 0 20px;
+      }
+      #boxDetail .contain .tit {
+        font-size: 20px;
+        margin-bottom: 1.5rem;
+      }
+    
+      /* 테이블 구조를 세로로 쌓이게 변경 */
+      #boxDetail .table {
+        display: block;           /* 표 전체를 block으로 전환 */
+        overflow-x: auto;         /* 내용이 넘치면 가로 스크롤 */
+        -webkit-overflow-scrolling: touch;
+      }
+      #boxDetail .table dl {
+        display: block;           /* 각 행을 블록으로 처리 */
+        margin-bottom: 1rem;      /* 행 간 간격 */
+      }
+      #boxDetail .table dl dt,
+      #boxDetail .table dl dd {
+        display: block;           /* 셀을 블록으로 전환해 세로 배치 */
+        width: 91%;              /* 화면 폭에 맞게 늘림 */
+        box-sizing: border-box;
+      }
+      #boxDetail .table dl dt {
+        margin-bottom: 0.5rem;    /* 제목(Heading)과 내용(Content) 간격 */
+        padding: 1rem;
+        width: auto;              /* width 고정값 제거 */
+      }
+      #boxDetail .table dl dd {
+        padding: 1rem;
+        margin-left:20px;
+      }
+    
+      /* FAQ 형태(#boxCommon) 영역 폰트 사이즈, 간격 축소 */
+      #boxCommon dl dt {
+        font-size: 20px;
+        padding: 1rem;
+        line-height: 1.4;
+      }
+      #boxCommon dl dd {
+        font-size: 14px;
+        padding: 0 1rem 1rem;
+        line-height: 1.4;
+      }
+    }
+    </style>
+    
+
+
+<div id="boxDetail">
+	<div class="contain">
+		<div class="table">
+						<dl>
+				<dt>대출자격</dt>
+				<dd>
+										<div>아파트 / 오피스텔 / 단독 / 다세대 / 연립주택 본인 및 공동소유자<br>사업자, 프리랜서, 무직자 가능<br>※ 4대가입 직장인 우대</div>
+									</dd>
+			</dl>
+						<dl>
+				<dt>대출한도</dt>
+				<dd>
+										<div>최소 1천만원 ~ 최대 50억원</div>
+									</dd>
+			</dl>
+						<dl>
+				<dt>대출금리</dt>
+				<dd>
+										<div>최대 LTV80% - 금리 3%~6% (방공제 차감)<br>최대 LTV95% - 금리 6%~18% (방공제 차감 없음)</div>
+									</dd>
+			</dl>
+						<dl>
+				<dt>대출기간</dt>
+				<dd>
+										<div>최단 12개월 ~ 최장 480개월</div>
+									</dd>
+			</dl>
+						<dl>
+				<dt>상환방식</dt>
+				<dd>
+										<div>원리금균등분할상환, 만기일시상환</div>
+									</dd>
+			</dl>
+						<dl>
+				<dt>유의사항</dt>
+				<dd>
+										<div>모든 대출 상품의 상환기간은 최단 61일을 초과하며 최장 1800일 입니다.<br>
+<br>
+조기상환수수료 3% 이내, 수수료 및 기타 비용을 포함한 최대 연 이자율은 20% 이내 입니다.<br>
+연체금리는 약정이자율 +3%p 이내 연 20% 이내 입니다.<br>
+취급수수료 등 기타 부대비용 없음 (단, 근저당 해지비용은 본인부담)<br>
+조기상환수수료 없음 (단, 담보대출은 3년이내 상환 시 최대 3%이내)<br>
+<br>
+대출 총 비용 예시는 다음과 같습니다. <br>
+1,000,000원을 12개월 동안 최대 연 이자율 20%로 원리금균등상환방법으로 이용하는 경우 총 상환 금액 1,111,614원 입니다.</div>
+									</dd>
+			</dl>
+					</div>
+	</div>
+</div>
