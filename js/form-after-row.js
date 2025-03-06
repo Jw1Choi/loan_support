@@ -27,7 +27,7 @@ form.innerHTML = `
                             </td>
                         </tr>
                         <tr>
-                            <th><!--<i class="fa fa-phone" aria-hidden="true"></i>-->연락처</th>
+                            <th>연락처</th>
                             <td>
                                 <input type='text' name='entry.668010623' id='phone' class="form-control" placeholder="휴대폰번호" maxlength="11">
                             </td>
