@@ -501,6 +501,176 @@
   </div><!-- end box -->
 </section>
 
+<style>
+  /* 전체 섹션 */
+  #list_loan {
+    width: 100%;
+    background-color: #f7f8f9;
+    padding: 60px 20px;
+    box-sizing: border-box;
+  }
+
+  /* 내부 컨텐츠 박스 */
+  #list_loan .container {
+    /* max-width: 1200px; */
+    width:100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  /* 왼쪽: 제목 영역 */
+  #list_loan .left {
+    flex: 1 1 400px;
+    min-width: 300px;
+  }
+
+  #list_loan .left h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+    color: #333;
+  }
+
+  /* 오른쪽: 리스트 영역 */
+  #list_loan .right {
+    flex: 1 1 600px;
+    min-width: 300px;
+    width: 100%;
+  }
+
+  #list_loan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align:-webkit-center;
+  }
+
+  #list_loan li {
+    display: flex;
+    align-items: center;
+     /* justify-content: center; */
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    font-weight:bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* width:100%; */
+    max-width:500px;
+  }
+
+  #list_loan li .icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+  }
+
+  #list_loan li:nth-child(1) .icon {
+    background-image: url('./img/icon1.png');
+  }
+
+  #list_loan li:nth-child(2) .icon {
+    background-image: url('./img/icon1.png');
+  }
+
+  #list_loan li:nth-child(3) .icon {
+    background-image: url('./img/icon1.png');
+  }
+
+  #list_loan li:nth-child(4) .icon {
+    background-image: url('./img/icon1.png');
+  }
+
+  #list_loan li:nth-child(5) .icon {
+    background-image: url('./img/icon1.png');
+  }
+
+  #list_loan li .text {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  /* 반응형: 900px 이하에서 좌우 → 세로 쌓기 */
+  @media (max-width: 1100px) {
+    #list_loan .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #list_loan .left,
+    #list_loan .right {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    #list_loan .left h2 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    #list_loan ul {
+      margin-top: 20px;
+    }
+
+    #list_loan li {
+      /* justify-content: center; */
+      text-align: left;
+    }
+
+    #list_loan li .text {
+      text-align: left;
+    }
+  }
+</style>
+</head>
+<body>
+
+<section id="list_loan">
+<div class="container">
+  <!-- 왼쪽 영역 -->
+  <div class="left">
+    <h2>
+      월 납입금은 줄이고<br>한도를 높일 수 있는<br>
+      우대자격요건<br>
+      
+    </h2>
+  </div>
+  <!-- 오른쪽 영역 -->
+  <div class="right">
+    <ul>
+      <li>
+        <span class="icon"></span>
+        <span class="text">4대 보험 가입자 (우대)</span>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <span class="text">신용카드 사용자 (우대)</span>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <span class="text">우량직군 [대기업, 공무원, 전문직] (우대)</span>
+      </li>
+      <li>
+        <span class="icon"></span>
+        <span class="text">아파트 및 자동차 소유자 (우대)</span>
+      </li>
+    </ul>
+  </div>
+</div>
+</section>
+
+
 <section id="intro1">
   <div class="container">
     <div class="title-section">
