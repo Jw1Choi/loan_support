@@ -1,0 +1,228 @@
+
+
+<style>
+  
+a:link, a:visited,
+a:hover, a:focus, a:active {
+	text-decoration:none;
+}
+
+
+:root {
+ --main-color: #0060ad;
+ --sub-color: #002060;
+
+}
+
+
+#main1 .center, #main2 .center, #footer .center {
+  width: 100%;
+  max-width: 1240px; /* 원한다면 최대 폭을 1240px로 제한 */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* #wrapper.on {position: fixed; left:0; top:0; width:100%; height:100%; overflow: hidden;} */
+
+
+
+
+/*main1*/
+#main1 .center.list{padding: 60px 0; }
+#main1 .list {display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+#main1 .list a{display: block; padding: 40px; border: 1px solid var(--sub-color); box-shadow: 1px 1px 30px rgba(0, 32, 96, 0.1);;}
+#main1 .list a figure {margin:0;}
+#main1 .list a figure img{display: block; height: 46px;}
+#main1 .list a h3{margin: 2rem 0 2.4rem; font-size: 26px; color: #222; font-weight: bold; }
+#main1 .list a dl{margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: center; }
+#main1 .list a dl dt{font-size: 18px; color: #767676; font-weight: bold; }
+#main1 .list a dl dd{font-weight: bold; color: #222; font-size: 24px; }
+#main1 .list a dl dd span{font-size: 16px; }
+#main1 .list a p{font-size: 17px; display: flex; justify-content: center; align-items: center; background: var(--sub-color); padding: 1rem; color: #fff; }
+
+    
+    /* 1200px 이하 → 2컬럼 */
+    @media screen and (max-width:1200px) {
+      #main1 .center.list {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+    
+    /* ===== main2 ===== */
+    #main2 {
+      padding:20px 0 50px;
+    }
+    #main2 .center {
+      background:var(--main-color);
+    }
+    #main2 .center a {
+      position:relative; padding:2.2rem;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    #main2 .center a h2 {
+      color:#fff; font-size:24px;
+    }
+    #main2 .center a h2 span {
+      margin-left:40px;
+    }
+    #main2 .center img {
+      position:absolute; top:30px; right:2rem;
+    }
+
+    @media screen and (max-width:600px) {
+     
+        #main2 .center img {
+      top:50px; right:0rem;
+      width:200px;
+    }
+        
+    }
+
+    @media screen and (max-width:500px) {
+     
+     #main2 .center img {
+   top:80px; right:0rem;
+   width:120px;
+ }
+     
+ }
+    
+  
+   
+    
+    /* 
+       ============ 768px 이하(모바일/태블릿) ============ 
+    */
+    @media screen and (max-width:768px) {
+     
+      /* main1: 1컬럼 */
+      #main1 .center.list {
+        grid-template-columns:repeat(1,minmax(0,1fr));
+        gap:20px; padding:30px 0;
+      }
+      #main1 .center.list a {
+        padding:20px;
+      }
+      #main1 .center.list a h3 {
+        margin:1rem 0; font-size:20px;
+      }
+      #main1 .center.list a dl dt {
+        font-size:14px;
+      }
+      #main1 .center.list a dl dd {
+        font-size:18px;
+      }
+    
+    }
+    
+    /* 
+       ============ 370px 이하(초소형 기기) ============ 
+    */
+    @media screen and (max-width:370px) {
+     
+      #main1 .center.list a h3 {
+        font-size:18px;
+      }
+      #main1 .center.list a dl dd {
+        font-size:16px;
+      }
+      #main1 .center.list a dl dt {
+        font-size:12px;
+      }
+      #main1 .center.list a p {
+        font-size:14px;
+      }
+    
+    }
+    
+   
+    
+    </style>
+    
+    </head>
+    <body>
+    
+      <!--header-->
+     
+      
+    
+      <!--//header-->
+    
+      
+      
+        
+        <section id="main1">
+          <div class="center list">
+            <a href="./sh/subs/sub01.php?ms=S00276888D&ca=">
+              <figure><img src="./sh/img/main1_01.png" alt=""></figure>
+              <h3>사업자담보대출</h3>
+              <dl>
+                <dt>대출금리</dt>
+                <dd>연 5.5~5.7<span>%</span></dd>
+              </dl>
+              <p>자세히 보기</p>
+            </a>
+            
+            <a href="./sh/subs/sub02.php?ms=S00276888D&ca=">
+              <figure><img src="./sh/img/main1_02.png" alt=""></figure>
+              <h3>주택담보대출</h3>
+              <dl>
+                <dt>대출금리</dt>
+                <dd>연 5.5~5.7<span>%</span></dd>
+              </dl>
+              <p>자세히 보기</p>
+            </a>
+            
+            <a href="./sh/subs/sub03.php?ms=S00276888D&ca=">
+              <figure><img src="./sh/img/main1_03.png" alt=""></figure>
+              <h3>전세담보대출</h3>
+              <dl>
+                <dt>대출금리</dt>
+                <dd>연 5.5~5.7<span>%</span></dd>
+              </dl>
+              <p>자세히 보기</p>
+            </a>
+            
+            <a href="./sh/subs/sub04.php?ms=S00276888D&ca=">
+              <figure><img src="./sh/img/main1_04.png" alt=""></figure>
+              <h3>교회담보대출</h3>
+              <dl>
+                <dt>대출금리</dt>
+                <dd>연 5.2~5.9<span>%</span></dd>
+              </dl>
+              <p>자세히 보기</p>
+            </a>
+            
+            <a href="./sh/subs/sub05.php?ms=S00276888D&ca=">
+              <figure><img src="./sh/img/main1_05.png" alt=""></figure>
+              <h3>모텔담보대출</h3>
+              <dl>
+                <dt>대출금리</dt>
+                <dd>연 5.2~7.0<span>%</span></dd>
+              </dl>
+              <p>자세히 보기</p>
+            </a>
+            
+            <a href="./sh/subs/sub06.php?ms=S00276888D&ca=">
+              <figure><img src="./sh/img/main1_06.png" alt=""></figure>
+              <h3>햇살론</h3>
+              <dl>
+                <dt>대출금리</dt>
+                <dd>연 8~9<span>%</span>대</dd>
+              </dl>
+              <p>자세히 보기</p>
+            </a>
+          </div>
+        </section>
+    
+        <section id="main2">
+          <div class="center">
+            <a href="./sh/subs/sub07.php?ms=S00276888D&ca=">
+              <h2><b>상담신청</b> 바로가기 <span>→</span></h2>
+              <img src="./sh/img/main2_bg.png" alt="">
+            </a>
+          </div>
+        </section>
+      
+
+		

@@ -1,0 +1,340 @@
+
+
+
+<style>
+  @charset "euc-kr";
+
+
+
+html,body,section,article,header,footer,nav,
+div,p,
+h1,h2,h3,h4,h5,h6,
+ul,ol,li,dl,dd,dt,
+img,a,
+form,input,select,option,fieldset,textarea,button,label,
+figure,video {
+	margin:0;
+	padding:0;
+	border:0;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-color:transparent;
+	line-height:1;
+	text-decoration:none;
+	font-family:'pretendard','noto sans kr','맑은 고딕',돋움,'Apple SD Gothic Neo','sans-serif','CUNanum';
+	font-size:15px;
+	font-weight:normal;
+	color:#555;
+	letter-spacing:-0.4px;
+	box-sizing:border-box;
+	text-size-adjust:none;
+	list-style:none;
+	word-break: keep-all;
+}
+a:link, a:visited,
+a:hover, a:focus, a:active {
+	text-decoration:none;
+}
+
+table {width:100%; border-spacing:0; border-collapse:collapse;}
+
+/* 폼초기화 */
+select,button,input[type=text],input[type=submit],textarea	{
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	/* border-radius:0; */
+}
+
+select	{	box-sizing:border-box;}
+/*크롬사라피*/
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	select	{	padding-right:22px !important;	background:url(../img/bg_select.svg) no-repeat right center; background-size:contain;}
+}
+/*파이어폭스*/
+@-moz-document url-prefix(){
+	select	{	padding-right:22px !important;	background:url(../img/bg_select.svg) no-repeat right center; background-size:contain;}
+}
+
+:root {
+ --main-color: #0060ad;
+ --sub-color: #002060;
+
+}
+
+
+.bold{font-weight: 900;}
+.main_color{color: var(--main-color);}
+.center {width: 95%; max-width:1240px; margin:0 auto; }
+.clear::after	{content:""; display:block; clear:both;}
+#wrapper.on {position: fixed; left:0; top:0; width:100%; height:100%; overflow: hidden;}
+
+
+.hidden {position:absolute; left:-100%; top:0%; overflow:hidden; width:0; height:0; font-size:0; text-indent:-9999%; line-height:0;}
+
+
+/*========= input ===========*/
+.unit {position: absolute; right:10px; top:50%; transform:translateY(-50%);}
+.ip_comm	{display:block; width:100%; height:45px; padding:0 10px; border: 1px solid #ddd; background-color: #fff; box-sizing:border-box; outline:none; border-radius: 5px;}
+.ip_comm.b0{border-radius: 6px 6px 0 0;}
+.ip_comm::placeholder{font-size: 1.35rem; color: #ccc; }
+.ip_comm:focus	{background-color: #f5f5f5;}
+.ip_comm.tel	{float:left; width: 30%;}
+.ip_comm.tel+.bar	{float:left; width:5%; text-align:center; line-height:45px; }
+.set_tel	{overflow:hidden;}
+select.ip_comm	{padding-right:0;}
+textarea.ip_comm	{height:150px; padding:15px; line-height:1.5;}
+
+.btn_sm	{display:block; padding: 0 20px; width: 100%; height: 56px; margin:0 auto; background-color: var(--main-color); font-weight: 600; color: #fff; border-radius: 6px; text-align: center; font-size: 18px; }
+
+.btn_nav {display:none; align-items: center ;justify-content:center; width:22px; position: absolute; right: 12px; top: 36px;}
+.on .btn_nav {z-index: 101;}
+.btn_hbg {position: relative; display:flex; flex-direction: column; justify-content: space-between; width:100%; height:15px;}
+.btn_hbg div,
+.btn_hbg:before,
+.btn_hbg:after {content:""; position:relative; display:block; width:100%; height:1px; background-color:#444; transition:all 0.3s}
+.on .btn_hbg div {background-color:transparent;}
+.on .btn_hbg:before,
+.on .btn_hbg:after {position: relative; transform-origin: center;}
+.on .btn_hbg:before {top:50%; transform:rotate(45deg);}
+.on .btn_hbg:after {top:-50%; transform:rotate(-45deg);}
+
+
+#wrapper {padding-top: 90px; overflow: hidden; width:100%; min-width:1180px; }
+
+
+
+/*========= header ===========*/
+#header {position: fixed; top: 0; z-index: 99;  width: 100%; background: #fff; }
+#header .center {width: 100%; padding: 1rem 2rem;  display: flex; justify-content: space-between; align-items: center;   position: relative; }
+#header h1 a{}
+#header h1 a img{height: 32px;}
+
+#nav {}
+#nav .nav_list {text-align: center;}
+#nav .nav_list div {position: relative; display: inline-block; margin: 0px 25px; }
+#nav .nav_list .dep1	{display:block; padding:36px 0; font-size: 18px; color:#222; transition: all 0.5s linear;}
+#nav .nav_list div:hover .dep1	{}
+#nav .nav_list div .dep1::after	{content:""; position: absolute; left:50%; bottom:0; transform:translateX(-50%); width:0; height:2px; background-color: var(--main-color); display: block; transition:all 0.5s; z-index: 100;}
+#nav .nav_list div:hover .dep1::after	{width:100%;}
+
+
+.site_info{width: 380px; display: flex; justify-content: flex-end; align-items: flex-end; flex-wrap: wrap;}
+.site_info .txt_logo{padding-left: 20px; background-image: url(../img/shin_logo.gif); background-position: left center; background-size: auto 15px; font-size: inherit; color: var(--main-color);}
+.site_info li{  position: relative; margin: .2rem; line-height: 1.2; text-align: right; color: #767676;}
+
+
+.move #header{box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);}
+
+/*========= main ===========*/
+
+#visual {height: 540px; background: url(../img/visual.jpg) 50% no-repeat; background-size: cover; }
+#visual .center{ position: relative; height: inherit;  }
+#visual .center hgroup{position: absolute; top: 50%; transform: translateY(-50%);}
+
+#visual .center hgroup h2{font-family: 'CUNanum'; font-weight: bold; color :#222; font-size: 37px; line-height: 1.4; }
+#visual .center hgroup h2 strong{font-size: 56px; color: var(--main-color); margin-bottom: .5rem; }
+
+#visual .center hgroup ul{margin-top: 50px;}
+#visual .center hgroup ul li{position: relative; padding-left: 12px; line-height: 2; }
+#visual .center hgroup ul li:after{content: ''; position: absolute; top: 10px; left: 0; width: 1px; height: 10px; background: #444; }
+
+
+/*main1*/
+#main1 .center.list{padding: 60px 0; }
+.list {display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.list a{display: block; padding: 40px; border: 1px solid var(--sub-color); box-shadow: 1px 1px 30px rgba(0, 32, 96, 0.1);;}
+.list a figure img{display: block; height: 46px; }
+.list a h3{margin: 2rem 0 2.4rem; font-size: 26px; color: #222; font-weight: bold; }
+.list a dl{margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: center; }
+.list a dl dt{font-size: 18px; color: #767676; font-weight: bold; }
+.list a dl dd{font-weight: bold; color: #222; font-size: 24px; }
+.list a dl dd span{font-size: 16px; }
+.list a p{font-size: 17px; display: flex; justify-content: center; align-items: center; background: var(--sub-color); padding: 1rem; color: #fff; }
+
+/*main2*/
+#main2 {padding: 20px 0 50px;}
+#main2 .center {background: var(--main-color);}
+#main2 .center a{position: relative; padding: 2.2rem;  display: flex; justify-content: space-between; align-items: center; }
+#main2 .center a h2{color: #fff; font-size: 24px; }
+#main2 .center a h2 span{margin-left: 40px; }
+
+#main2 .center img{position: absolute; top: -30px; right: 2rem; }
+
+/*========= footer ===========*/
+#footer {background: #222; }
+#footer .center{padding: 40px; text-align: center; }
+#footer .caution{line-height: 1.75; color: #fff; margin: .4rem 0; }
+/*심의필 나오면 아래 스타일로 변경*/
+/* #footer .caution{line-height: 1.75; color: #767676; margin: .4rem 0; } */
+#footer .info li{margin: .4rem .6rem; position: relative; display: inline-block; color: #fff; }
+#footer .info li a{color: inherit; display: inline-block; }
+#footer .info li a span{text-decoration: underline;}
+
+/*========= sub ===========*/
+/* #contents.sub{padding: 0 0 120px;} */
+
+
+#sub_visual{background: var(--main-color);}
+#sub_visual .center{padding: 5rem 0 9rem; display: flex; justify-content: center; align-items: center; text-align: center; flex-direction:column;}
+#sub_visual .center figure img{display: block; height: 65px; }
+#sub_visual .center h2{margin-top: 26px; font-size: 30px; color: #fff; font-weight: bold; }
+
+.sub .box{transform: translateY(-80px); padding: 50px; border-radius: 10px; background: #fff; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);}
+.sub .box dl{border-top: 2px solid #222; display: grid; grid-template-columns: 200px 1fr; }
+.sub .box dl dt{display: flex; justify-content: center; align-items: center; background: #f8f8f8;  color: #444; font-weight: 700; }
+
+.sub .box dl dd{line-height: 1.5;}
+.sub .box dl dd strong{font-weight: normal; font-size: 22px; }
+.sub .box dl dd span{color: var(--main-color); }
+
+.sub .box dl dd ul{font-size: inherit; color: inherit;}
+.sub .box dl dd ul li{display: inline-block; position: relative; font-size: inherit; color: inherit;}
+.sub .box dl dd ul li:after{content: ''; display: inline-block; margin: 0 10px; width: 1px; height: 14px; background: #ddd; }
+.sub .box dl dd ul li:last-child:after{display: none;}
+
+.sub .box dl dt,
+.sub .box dl dd{padding: 2rem 2rem; font-size: 18px; border-bottom: 1px solid #ddd; }
+.sub .btn_app{margin: -20px auto 80px; display: flex; justify-content: center; align-items: center; width: 200px; height: 70px; background: var(--main-color); color: #fff; font-size: 20px; font-weight: bold; }
+
+
+/*apply*/
+.sub .box.apply{width: 400px; margin: 0 auto; }
+.apply .logo{display: block; text-align: center; height: 32px; margin: 0 auto 15px; }
+.apply_tbl tr{display: block;}
+.apply_tbl th{display: block; margin: 20px 0 12px; text-align: left; }
+.apply_tbl td{position: relative; display: block; }
+.apply_tbl td:after{content: ''; display: block; clear: both;}
+.set_agree{display: flex; gap: 5px; margin: 20px 0;}
+
+
+#sub_visual.sub_visual07 .center{padding: 6rem 0; }
+#sub_visual.sub_visual07 .center figure{display: none;}
+#sub_visual.sub_visual07 .center h2{margin: 0; }
+
+
+.sub0701 .list{padding: 80px 0; }
+.sub0701 .list a{padding: 50px 40px 40px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.sub0701 .list a p{width: 100%; }
+
+/*시세표*/
+.tbl {}
+.tbl th,
+.tbl td {padding:22px; border-right: 1px solid #eee; border-bottom:1px solid #eee; border-left: 1px solid #eee;}
+.tbl th {background-color: #f5f5f5; font-weight: 600; text-align: center;}
+.tbl th.money{width: 25%;}
+
+.tbl td span{font-size: 13px;}
+.tbl td.red,
+.tbl td.blue{text-align: center;}
+.tbl td.red{color: #e00f0f;}
+.tbl td.blue{color: #3058ef;}
+
+
+.tbl td dl dt,
+.tbl td dl dd {display: inline-block;}
+.tbl td dl dt {}
+.tbl td dl dd {margin-right: 15px;}
+
+
+@media screen and (max-width:1530px) {
+
+	/* .site_info li{font-size: 13px; } */
+
+	#header .center{padding: 1rem 8rem 1rem 2rem; }
+
+	#nav {padding: 6rem 0;  position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #fff; z-index: 88; overflow-y: scroll; display: none;}
+	#nav .nav_list div{display: block; }
+	#nav .nav_list .dep1{font-size: 20px; }
+	#nav .nav_list div .dep1::after{display: none; }
+	#nav .nav_list div .dep1:hover{text-decoration: underline;}
+
+
+	.btn_nav{position: fixed; width: 100px; height: 100px; background: var(--main-color); display: flex; z-index: 99; top: 0; right: 0; }
+	.btn_hbg div, .btn_hbg:before, .btn_hbg:after{background-color: #fff; }
+	.btn_hbg{width: 50%; height: 30px; }
+
+	.on #nav{display: block; }
+
+
+
+}
+
+
+/* 모달팝업 */
+#modal-content {display:none;width:600px;max-width:90%;height:500px;box-shadow:0 5px 15px rgba(0, 0, 0, 0.5);background-color: #fff;border: 1px solid rgba(0, 0, 0, 0.2);border-radius: 0;outline: 0 none}
+#modal-content .modal-header {height:20px;border-bottom:1px solid #e5e5e5;padding:15px}
+#modal-content .modal-header h4 {margin:0;font:bold 18px 'Malgun Gothic';color:#5d5d5d}
+#modal-content .modal-body {padding:15px}
+#modal-content .modal-body .b-iframe {width:570px;max-width:100%;height:430px}
+#modal-content .b-close{float:right;font:bold 21px Arial;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20);padding:0;cursor:pointer;background:transparent;border:0;-webkit-appearance:none}
+#modal-content .b-close:hover, #modal-content .b-close:focus{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
+p.modal-frame-content{width:550px;max-width:100%;height:400px;padding-right:5px;overflow-x:hidden;overflow-y:auto;font:normal 12px 'Malgun Gothic';color:#555;line-height:1.65em}
+/*.popbtn {text-decoration:none;cursor:pointer;margin:0 5px}*/
+.b-modal __b-popup1__ {max-width:100%}
+#modal-content .modal-header,#modal-content .modal-body{box-sizing:content-box !important}
+
+#modal-content2 {display:none; width:400px; height:560px; background:rgba(54,54,54,0.9); border-radius:4px; border:0px;}
+#modal-content2 .modal-header {position:relative; height:28px;}
+#modal-content2 .modal-body2 {padding:0;}
+#modal-content2 .b-close{position:absolute;top:0;right:16px;font-size:40px;font-weight:900;font-family:Tahoma;color:#fff;opacity:.5;filter:alpha(opacity=50);padding:0;cursor:pointer;background:transparent;border:0;-webkit-appearance:none}
+#modal-content2 .b-close:hover, #modal-content .b-close:focus{cursor:pointer;opacity:1;filter:alpha(opacity=100)}
+#modal-content2 .modal-body2 .b-iframe {width:400px;height:560px;}
+   
+    
+    </style>
+    
+
+    
+    <section id="sub_visual" class="sub_visual03">
+      <div class="center">
+        <figure><img src="./img/main1_03.png" alt=""></figure>
+        <h2>전세담보대출</h2>
+      </div>
+    </section>
+    
+    <div id="contents" class="sub sub03 sub0301 center">
+      <div class="box">
+        <dl>
+          <dt>대출내용</dt>
+          <dd>주택 임차인을 위한 임차보증금 담보대출</dd>
+          
+          <dt>대출대상</dt>
+          <dd>소득증빙이 가능한 개인</dd>
+          
+          <dt>대출금리</dt>
+          <dd>연 <span><strong>5.5</strong>% ~ <strong>5.7</strong>%</span> (변동금리)</dd>
+          
+          <dt>대출한도</dt>
+          <dd>전세보증금의 최대 80%이내</dd>
+          
+          <dt>상환방법</dt>
+          <dd>만기일시상환</dd>
+          
+          <dt>대출기간</dt>
+          <dd>임대차 전세계약 이내(연장가능)</dd>
+          
+          <dt>연체이자율</dt>
+          <dd>대출금리+연3%</dd>
+          
+          <dt>중도상환수수료</dt>
+          <dd>
+            <ul>
+              <li>개인 1.6%</li>
+              <li>사업자 1.8%</li>
+            </ul>
+          </dd>
+          
+          <dt>부대비용</dt>
+          <dd>수입인지세 50% 부담(5000만원 이상일 경우)</dd>
+          
+          <dt>특이사항</dt>
+          <dd>다주택자 가능</dd>
+        </dl>
+      </div>
+      <a href="/site19/land/daebangcu3/counsel.php?sel_type=3&ms=S00276888D&ca=" class="btn_app">대출상담신청</a>
+    </div>
+        <!-- contents-->
+    
+
+		
