@@ -244,7 +244,31 @@
     <div class="footer-text">* 개인별로 조건은 다를 수 있습니다.</div>
 </section>
 
+<!-- <section id="limit-graph">
+  <div class="headline">신용점수, 소득 수준을 낮춰서<br><strong>6등급 이하, 저소득이라도<br>대출 승인 가능성을 높이고!</strong></div>
+  <div class="savings-badge">▲ 40% 상승</div>
 
+  <div class="bar-section">
+      <div class="bar-container">
+          <div class="bar gray-bar" style="height:40px;">거절
+              <div class="common-label">신용 6등급 미만</div>
+          </div>
+      </div>
+      <div class="bar-container">
+          <div class="bar gray-bar" style="height:40px;">거절
+              <div class="common-label">신용 6등급 미만</div>
+          </div>
+      </div>
+      <div class="bar-container">
+          <div class="bar red-bar " id="redBar">
+              <b class="blink">대출 승인</b>
+              <div class="savings-label">▲ 6등급 미만</div>
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-text">* 개인별로 조건은 다를 수 있습니다.</div>
+</section> -->
 
 <section id="interest-graph">
   <div class="headline">고금리 부담에서 벗어나<br><strong>저금리로 월 납입금을<br>줄일 수 있도록 도와드립니다.</strong></div>
@@ -502,136 +526,7 @@
 </section>
 
 <style>
-  /* 전체 섹션 */
-  #list_loan {
-    width: 100%;
-    background-color: #f7f8f9;
-    padding: 60px 20px;
-    box-sizing: border-box;
-  }
-
-  /* 내부 컨텐츠 박스 */
-  #list_loan .container {
-    /* max-width: 1200px; */
-    width:100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-  }
-
-  /* 왼쪽: 제목 영역 */
-  #list_loan .left {
-    flex: 1 1 400px;
-    min-width: 300px;
-  }
-
-  #list_loan .left h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.5;
-    text-align: center;
-    margin: 0;
-    color: #333;
-  }
-
-  /* 오른쪽: 리스트 영역 */
-  #list_loan .right {
-    flex: 1 1 600px;
-    min-width: 300px;
-    width: 100%;
-  }
-
-  #list_loan ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align:-webkit-center;
-  }
-
-  #list_loan li {
-    display: flex;
-    align-items: center;
-     /* justify-content: center; */
-    background: #fff;
-    border-radius: 8px;
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    font-weight:bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    /* width:100%; */
-    max-width:500px;
-  }
-
-  #list_loan li .icon {
-    width: 28px;
-    height: 28px;
-    margin-right: 12px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    flex-shrink: 0;
-  }
-
-  #list_loan li:nth-child(1) .icon {
-    background-image: url('./img/icon1.png');
-  }
-
-  #list_loan li:nth-child(2) .icon {
-    background-image: url('./img/icon1.png');
-  }
-
-  #list_loan li:nth-child(3) .icon {
-    background-image: url('./img/icon1.png');
-  }
-
-  #list_loan li:nth-child(4) .icon {
-    background-image: url('./img/icon1.png');
-  }
-
-  #list_loan li:nth-child(5) .icon {
-    background-image: url('./img/icon1.png');
-  }
-
-  #list_loan li .text {
-    font-size: 1rem;
-    color: #333;
-  }
-
-  /* 반응형: 900px 이하에서 좌우 → 세로 쌓기 */
-  @media (max-width: 1100px) {
-    #list_loan .container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    #list_loan .left,
-    #list_loan .right {
-      flex: 1 1 100%;
-      max-width: 100%;
-    }
-
-    #list_loan .left h2 {
-      font-size: 1.6rem;
-      text-align: center;
-    }
-
-    #list_loan ul {
-      margin-top: 20px;
-    }
-
-    #list_loan li {
-      /* justify-content: center; */
-      text-align: left;
-    }
-
-    #list_loan li .text {
-      text-align: left;
-    }
-  }
+ 
 </style>
 </head>
 <body>
@@ -650,25 +545,58 @@
   <div class="right">
     <ul>
       <li>
-        <span class="icon"></span>
+        <img class="icon" src="./img/icon1.png">
         <span class="text">4대 보험 가입자 (우대)</span>
       </li>
       <li>
-        <span class="icon"></span>
+        <img class="icon" src="./img/icon1.png">
         <span class="text">신용카드 사용자 (우대)</span>
       </li>
       <li>
-        <span class="icon"></span>
+        <img class="icon" src="./img/icon1.png">
         <span class="text">우량직군 [대기업, 공무원, 전문직] (우대)</span>
       </li>
       <li>
-        <span class="icon"></span>
+        <img class="icon" src="./img/icon1.png">
         <span class="text">아파트 및 자동차 소유자 (우대)</span>
       </li>
     </ul>
   </div>
 </div>
 </section>
+
+<section id="list_loan">
+  <div class="container">
+    <!-- 왼쪽 영역 -->
+    <div class="left">
+      <h2>
+        유의해주세요!<br>한 가지만 해당되어도<br>신청 불가능 합니다.<br>
+        
+      </h2>
+    </div>
+    <!-- 오른쪽 영역 -->
+    <div class="right">
+      <ul>
+        <li>
+          <img class="icon" src="./img/icon9.png">
+          <span class="text">신용불량 (회생, 회복, 파산)</span>
+        </li>
+        <li>
+          <img class="icon" src="./img/icon9.png">
+          <span class="text">과다 대출자, 연체자</span>
+        </li>
+        <li>
+          <img class="icon" src="./img/icon9.png">
+          <span class="text">무직자, 사업자, 프리랜서 및 일용직 </span>
+        </li>
+        <li>
+          <img class="icon" src="./img/icon9.png">
+          <span class="text">3개월 미만 급여 근로자</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </section>
 
 
 <section id="intro1">
