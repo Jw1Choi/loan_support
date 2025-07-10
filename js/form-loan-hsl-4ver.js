@@ -16,7 +16,7 @@ form.innerHTML = `
     <h1 class="form-top-title" style="color:red;font-weight: 600;">무직자·연체자·개인회생<br>파산자·프리랜서·과다대출자 신청불가</h1>
     <div class="form-box-inner">
         <form action="" id="form_e11" method="POST" target="hidden_iframe11" onsubmit="dll(); submitted=true;">
-          <input type="hidden" name="entry.925560115" value="당근">
+          <input type="hidden" name="entry.925560115" value="메타">
             <div class="form-box-tb-out">
             <br>
                 <table class="form-box-tb">
@@ -210,107 +210,6 @@ form.innerHTML = `
 
 
 
-
-<section id="dbscf" style="display:none;">
-  <form id="db" name="f1" accept-charset="euc-kr" method="post" action="https://dbdbdeep.com/site19/land/oksaving/pc/save.php" target="hidden_iframe12">
-<input type="hidden" name="ms" value="S00261816I"/>
-<input type="hidden" name="ca" value="C05739008R"/>
-<input type="hidden" name="auto_defense" />
-<section class="dbfield_sec">
-  <div class="dbfield">
-      <div id="mi_db" style="top: -50px;">
-          <span class="hidden">디비필드로 이동할 위치값</span>
-      </div>
-      <div>
-          <img src='img_new/db_title.jpg' style="width: 100%;padding-bottom: 6%;">
-      </div>
-      <div class="dbfield_tbl_w">
-          <table>
-              <caption class="hidden">디비필드 입력폼</caption>
-              <tbody>
-              <tr>
-                  <th scope="row">
-                      <label>성함</label>
-                  </th>
-                  <td>
-                      <input type="text" name="name" style="width: 10em;">
-                      <!-- <span class="dbfield_explain">설명</span> -->
-                  </td>
-              </tr>
-              <tr>
-                  <th scope="row">
-                      <label>전화번호</label>
-                  </th>
-                  <td>
-                      <input class="align_center" type="tel" name="tel1" maxlength="3" value="010"
-                               onclick="this.select();" style="width: 3em;">
-                      -
-                      <input class="align_center" type="tel" name="tel2" maxlength="4" style="width: 4em;">
-                      -
-                      <input class="align_center" type="tel" name="tel3" maxlength="4" style="width: 4em;">
-                      <!-- <span class="dbfield_explain">설명</span> -->
-                  </td>
-              </tr>
-              <tr>
-                  <th scope="row">
-                      <label>신청금액</label>
-                  </th>
-                  <td>
-                      <input type="text" name="item1" style="width: 10em;">
-                      <!-- <span class="dbfield_explain">설명</span> -->
-                  </td>
-              </tr>
-              <tr>
-                  <th scope="row">
-                      <label>문의사항</label>
-                  </th>
-                  <td>
-                      <textarea name="etc" placeholder="상담신청메모 요청사항있으면 적어주세요~"></textarea>
-                      <!-- <span class="dbfield_explain">설명</span> -->
-                  </td>
-              </tr>
-              <tr>
-                  <th scope="row">
-                      <label>
-                          <span class="no_br">개인정보</span>
-                          <span class="no_br">취급동의</span>
-                      </label>
-                  </th>
-                  <td>
-                      <a href="javascript:dbdb_pri_popup();" class="btn_private">
-                          <span>개인정보 취급방침</span>
-                      </a>
-                      <span class="private_chk">
-                          <label>
-                              <input type="radio" name="agree" checked="checked">
-                              <span>예</span>
-                          </label>
-                          <label>
-                              <input type="radio" name="agree">
-                              <span>아니오</span>
-                          </label>
-                      </span>
-                  </td>
-              </tr>
-              </tbody>
-          </table>
-      </div>
-      <div class="btn_dbfield_submit_w">
-          <button type="button" class="btn_dbfield_submit"
-                    onclick="javascript:OnSubmit(document.f1);" style="width:100%;background:#015fd3;padding:5px 1.5em">
-              <span>빠른상담 신청하기</span>
-          </button>
-          <div style="color: red !important;font-weight: bold;">
-              <font  style="color: red !important;font-weight: bold;">파산면책자,연체자는 신청불가</font>
-          </div>
-      </div>
-  </div>
-</section>
-</form>
-
-  
-  
-  </section>
 
 
 
